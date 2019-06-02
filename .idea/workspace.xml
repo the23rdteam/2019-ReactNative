@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589e4094-a7d9-485d-893c-9f7e76da13ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CityList.js" beforeDir="false" afterPath="$PROJECT_DIR$/CityList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +16,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -34,13 +34,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CityList.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CityList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CityList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="24" lean-forward="true" selection-end-line="71" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeatherDetailScreen.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WeatherDetailScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#style#0;n#FlatList#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +83,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Navigation.js" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/CityList.js" />
+        <option value="$PROJECT_DIR$/CityDetailScreen.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/WeatherDetailScreen.js" />
       </list>
     </option>
   </component>
@@ -190,12 +205,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559483347741</updated>
-      <workItem from="1559483351718" duration="6902000" />
+      <workItem from="1559483351718" duration="7264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6902000" />
+    <option name="totallyTimeSpent" value="7264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1317" height="1027" extended-state="0" />
@@ -258,22 +273,33 @@
     <entry file="file://$PROJECT_DIR$/Navigation.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
+    <entry file="file://$PROJECT_DIR$/CityList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="270">
+          <caret line="18" column="24" lean-forward="true" selection-end-line="71" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CityList.js">
+    <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WeatherDetailScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#style#0;n#FlatList#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
