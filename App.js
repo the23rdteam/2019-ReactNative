@@ -5,9 +5,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>1</Text>
-        <Text>2</Text>
-        <Text>3</Text>
+        <Text style={styles.text}>1</Text>
+        <Text style={styles.text}>2</Text>
+        <Text style={styles.text}>3</Text>
       </View>
     );
   }
@@ -21,4 +21,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  text: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: 'red',
+
+
+  }
 });
