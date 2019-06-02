@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textBig}>Hello, World!</Text>
+        <Text style={[styles.textBig, styles.textRed]}>Hello, World!</Text>
       </View>
     );
   }
@@ -20,5 +20,8 @@ const styles = StyleSheet.create({
   },
   textBig: {
     fontSize: 32,
+  },
+  textRed: {
+    color: 'red'
   },
 });
