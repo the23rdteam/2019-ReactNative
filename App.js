@@ -1,12 +1,21 @@
 import React from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
-  clickHandler = () => console.log('Clicked!');
+  state = {
+    counter: 0,
+  };
+
+  clickHandler = () => {
+    this.setState({
+      counter: this.state.counter + 1,
+    });
+  };
 
   render() {
     return (
       <View style={styles.container}>
+        <Text>{this.state.counter}</Text>
         <Button title={'click me!'} onPress={this.clickHandler}/>
       </View>
     );
