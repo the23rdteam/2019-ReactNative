@@ -4,7 +4,14 @@ import { Constants } from 'expo';
 
 export default class CityList extends React.Component {
   static navigationOptions = {
-    title: 'Cities',
+    title: 'Choose Cities!',
+    headerStyle:{
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
 
   constructor(props) {
@@ -37,9 +44,12 @@ export default class CityList extends React.Component {
 
   renderItem(city) {
     return (
+    <>
+      
       <TouchableOpacity style={styles.item} onPress={() => this.onPressCity(city)}>
         <Text style={styles.text}>{city}</Text>
       </TouchableOpacity>
+    </>
     );
   }
 
@@ -65,9 +75,11 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50,
     justifyContent: 'center',
-
+    borderRadius: 50,
+    perspective: 50,
     borderWidth: 1,
     borderColor: 'orange',
+    
   },
   text: {
     fontSize: 20,

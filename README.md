@@ -1,8 +1,19 @@
+# Writer
+
+201402413 임호정
+
 # RN101-class
 
 Example for React Native 101 class. Each commit represents each step.
 
 ## How to run
+
+> Prerequisite : Turn on Android Virtual Device
+
+```bash
+$ cd RN101-class
+$ yarn start
+```
 
 ### Clone the repository
 
@@ -22,3 +33,20 @@ $ npm install
 ```bash
 $ npm run
 ```
+# Improvement 
+
+1. Change Default Color & Container border 
+
+2. Show the city`s Information additionally with Table 
+    1. ex) celsius, sunrise, sunset, pressure, humidity, lon, lat, etc...
+
+3. Add Weather Icon Top 
+
+4. Add the spot in Map where we choose 
+
+5. Change unix Time to ISO Time 
+
+6. Show Chart in Temperature, Min & Max Temperature
+
+
+
