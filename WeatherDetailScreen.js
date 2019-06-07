@@ -163,7 +163,7 @@ export default class WeatherDetailScreen extends React.Component {
                 <Grid/>
             </BarChart>
             <XAxis
-                    style={{ marginHorizontal: -1 }}
+                    style={{ marginBottom: 10,  }}
                     data={ data }
                     formatLabel={ (value, index) => {
                       if(index==1)
