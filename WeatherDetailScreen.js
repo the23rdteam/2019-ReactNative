@@ -163,25 +163,25 @@ export default class WeatherDetailScreen extends React.Component {
                 <Grid/>
             </BarChart>
             <XAxis
-                    style={{ marginBottom: 10,  }}
+                    style={{ height:20,marginBottom: 40}}
                     data={ data }
                     formatLabel={ (value, index) => {
                       if(index==1)
                       {
-                        return 'Temperature'
+                        return 'Temp'
                       }
                       if(index==2)
                       {
-                        return 'minTemperature'
+                        return 'minTemp'
                       }
                       if(index==3)
                       {
-                        return 'maxTemperature'
+                        return 'maxTemp'
                       }
                       return null
                     } }
                     contentInset={{ left: 1, right: 1 }}
-                    svg={{ fontSize: 10, fill: 'black' }}
+                    svg={{ fontSize: 20, fill: 'black' }}
                 />
             
       </ScrollView>
