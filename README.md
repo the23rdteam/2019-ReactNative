@@ -33,7 +33,7 @@ $ npm install
 ```bash
 $ npm run
 ```
-# Improvement 
+### Improvement 
 
 1. Change Default Color & Container border 
 
@@ -47,6 +47,10 @@ $ npm run
 5. Change unix Time to ISO Time 
 
 6. Show Chart in Temperature, Min & Max Temperature
+
+### Result 
+
+![](./result.gif)
 
 
 
