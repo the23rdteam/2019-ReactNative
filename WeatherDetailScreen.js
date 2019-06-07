@@ -4,6 +4,7 @@ import { Constants, MapView } from 'expo';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { BarChart, Grid, XAxis } from 'react-native-svg-charts'
 
+
 function changeTime(unixTime){
   var date = new Date(unixTime*1000);
 // Hours part from the timestamp
@@ -131,14 +132,16 @@ export default class WeatherDetailScreen extends React.Component {
       tableData.push(rowData);
     }
     
-    const fill = 'rgb(134, 65, 244)'
-    const data   = [ 0,celsius,minCelsius ,maxCelsius, 0]
+    const fill = 'rgb(134, 65, 244)';
+    const data   = [ 0,celsius,minCelsius ,maxCelsius, 0];
+  
+
     return (
     <>
       <ScrollView style={styles.container}>
        
         <Image
-            style={{ width: 50 ,height: 50}}
+            style={{ width: 70 ,height: 70}}
             source={Image_Http_URL}
           />
 
@@ -183,7 +186,9 @@ export default class WeatherDetailScreen extends React.Component {
                     contentInset={{ left: 1, right: 1 }}
                     svg={{ fontSize: 20, fill: 'black' }}
                 />
-            
+
+
+
       </ScrollView>
       <MapView 
       style={styles.mapitem}
