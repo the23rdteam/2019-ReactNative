@@ -181,7 +181,7 @@ export default class WeatherDetailScreen extends React.Component {
                       {
                         return 'maxTemp'
                       }
-                      return null
+                      return null;
                     } }
                     contentInset={{ left: 1, right: 1 }}
                     svg={{ fontSize: 20, fill: 'black' }}
