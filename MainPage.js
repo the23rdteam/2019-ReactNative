@@ -2,8 +2,7 @@ import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, ScrollView, View} from 'react-native';
 import { Constants } from 'expo';
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
-
-
+import * as rssParser from 'react-native-rss-parser';
 
 export default class MainPage extends React.Component {
   static navigationOptions = {
@@ -20,10 +19,50 @@ export default class MainPage extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isLoading: true,
+    };
+
+  }
+
+  componentDidMount(){
+    fetch('http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=3020054000')
+    .then((response) => response.text())
+    .then((responseData) => rssParser.parse(responseData))
+    .then((rss) => {
+      
+      this.setState({
+        ...rss,
+        isLoading:false
+       })
+    });
   }
 
 
   render() {
+
+    if (this.state.isLoading) {
+      return (
+        <View style={styles.container}>
+          <Text>데이터를 불러오는 중입니다.</Text>
+        </View>
+      )
+    }
+
+    let title = this.state.title;
+    let pubDate = this.state.pubDate;
+    let description = this.state.items[0].description;
+    let value = description.split(/\n/gi)
+    // console.log(value)
+    let hour =[];
+    let check=[];
+    for(let i=9;i<9*7;i+=21){
+      hour.push(value[i]);  
+    }
+    for(let i=16;i<16*7;i+=21){
+      check.push(value[i]);  
+    }
+    
     return (
       <> 
         <ScrollView style={styles.container}>
@@ -59,7 +98,7 @@ export default class MainPage extends React.Component {
             <CardContent text="Seoul, Korea" />
             
         </Card>
-     
+
         </ScrollView>
         <TouchableOpacity style = {styles.button} onPress={() => this.props.navigation.navigate('CityList')}>
             <Text style={styles.text}>Check Weather!</Text>
