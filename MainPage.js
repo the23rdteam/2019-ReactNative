@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacity, ScrollView} from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, ScrollView, View} from 'react-native';
 import { Constants } from 'expo';
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
 
@@ -22,30 +22,11 @@ export default class MainPage extends React.Component {
 
   }
 
-//   componentDidMount() {
-//     fetch('http://demo6468405.mockable.io/weather-crawlers/cities')
-//       .then(response => response.json())
-//       .then(cities => {
-//         console.log('cities =', cities.length);
-//         this.setState({
-//           cities
-//         });
-//       });
-//   }
-
-//   onPressCity(item) {
-//     this.props.navigation.navigate(
-//       'Detail',
-//       {
-//         city: item
-//       }
-//     );
-//   }
 
   render() {
     return (
       <> 
-        <ScrollView>
+        <ScrollView style={styles.container}>
         <Card style={styles.container}>
             <CardImage 
               source={{uri: 'http://bit.ly/2GfzooV'}} 
@@ -79,10 +60,11 @@ export default class MainPage extends React.Component {
             
         </Card>
      
-    </ScrollView>
+        </ScrollView>
         <TouchableOpacity style = {styles.button} onPress={() => this.props.navigation.navigate('CityList')}>
             <Text style={styles.text}>Check Weather!</Text>
         </TouchableOpacity>
+        
       </>
     );
   }
@@ -94,17 +76,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: Constants.statusBarHeight,
   },
-
+  
   button: {
-    flex: 1,
-    height: "50%",
+    flex:0.1,
+    height: 5,
+    marginBottom:10,
+    marginTop:10,
+    marginLeft:3,
+    marginRight:3,
+    borderColor: 'black',
     justifyContent: 'center',
     borderRadius: 50,
-    marginTop:50,
-    marginBottom:10,
+    perspective: 50,
     borderWidth: 1,
-    borderColor: 'orange',
-    color: 'rgba(0, 255, 255, 0.7)',
+    backgroundColor: 'rgba(0,255,255,0.7)',
   },
   text: {
     fontSize: 30,
