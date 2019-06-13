@@ -50,16 +50,23 @@ export default class MainPage extends React.Component {
     }
 
     let title = this.state.title;
-    let pubDate = this.state.pubDate;
     let description = this.state.items[0].description;
+    
     let value = description.split(/\n/gi)
+    let updateDate = value[2];
+    updateDate = updateDate.slice(2);
+    let year = updateDate.slice(0,4);
+    let month = updateDate.slice(4,6);
+    let day = updateDate.slice(6,8);
+    let time = updateDate.slice(8,10);
+    let minutes = updateDate.slice(10);
     // console.log(value)
     let hour =[];
     let check=[];
-    for(let i=9;i<9*7;i+=21){
+    for(let i=9;i<9+(21*7);i+=21){
       hour.push(value[i]);  
     }
-    for(let i=16;i<16*7;i+=21){
+    for(let i=16;i<16+(21*7);i+=21){
       check.push(value[i]);  
     }
     
@@ -98,7 +105,9 @@ export default class MainPage extends React.Component {
             <CardContent text="Seoul, Korea" />
             
         </Card>
-
+        <Text style={styles.textWeather}>{title}</Text>
+        <Text>{year}년 {month}월 {day}일 {time} : {minutes}</Text>
+        {hour.map((e,index)=><Text>Hour : {e},      Weather : {check[index]}</Text>)}
         </ScrollView>
         <TouchableOpacity style = {styles.button} onPress={() => this.props.navigation.navigate('CityList')}>
             <Text style={styles.text}>Check Weather!</Text>
@@ -134,6 +143,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
 
+  },
+  textWeather: {
+    fontColor: '#fff',
+    fontWeight: 'bold',
   }
 });
 
