@@ -20,7 +20,7 @@
     "react-native-table-component": "^1.2.0",
     "react-native-tableview": "^2.5.0",
     "react-navigation": "^3.11.0",
-    "ws": "^7.0.0"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
